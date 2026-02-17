@@ -6,7 +6,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ToDoList {
 	
 	private String name;
-	private HashMap<Integer, String> tasks;
+	private HashMap<Integer, String> tasks = new HashMap<>();
 	private AtomicInteger count = new AtomicInteger();
 	
 	public ToDoList(String name) {
@@ -19,6 +19,14 @@ public class ToDoList {
 	
 	public String getName() {
 		return this.name;
+	}
+	
+	public String getTask(int index) {
+		return tasks.get(index);
+	}
+	
+	public int getTaskCount() {
+		return count.get();
 	}
 	
 	public void addTask(String task) {
