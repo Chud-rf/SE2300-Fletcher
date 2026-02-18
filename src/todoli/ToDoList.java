@@ -1,12 +1,13 @@
 package todoli;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ToDoList {
 	
 	private String name;
-	private HashMap<Integer, String> tasks = new HashMap<>();
+	private List<String> tasks = new ArrayList<>();
 	private AtomicInteger count = new AtomicInteger();
 	
 	public ToDoList(String name) {
@@ -30,7 +31,7 @@ public class ToDoList {
 	}
 	
 	public void addTask(String task) {
-		tasks.put(count.getAndIncrement(), task);
+		tasks.add(count.getAndIncrement(), task);
 	}
 
 }
