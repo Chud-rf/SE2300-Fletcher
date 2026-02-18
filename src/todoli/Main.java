@@ -128,6 +128,7 @@ public class Main {
 						break;
 					}
 					
+					break;
 				// User selected Exit
 				case 4:
 					exit = true;
