@@ -29,6 +29,7 @@ public class PrintMenus {
 	
 	public void noListFound() {
 		System.out.println("No lists found.");
+		System.out.println();
 	}
 	
 	public void createNewList() {
@@ -67,8 +68,17 @@ public class PrintMenus {
 		System.out.println("Enter the new task: ");
 	}
 	
-	public void removeTask() {
+	public void removeTask(ToDoList listToEdit) {
+		for (int i = 0; i < listToEdit.getTaskCount(); ++i) {
+			String currentTask = listToEdit.getTask(i);
+			System.out.println(i + ": " + currentTask);
+		}
 		System.out.println("Enter the index of the task to remove: ");
+	}
+	
+	public void noTasksFound() {
+		System.out.println("No tasks found.");
+		System.out.println();
 	}
 	
 	public void deleteConfirmation() {
@@ -77,11 +87,22 @@ public class PrintMenus {
 	
 	public void deleteCompleted(ToDoList listToEdit) {
 		System.out.println(listToEdit.getName() + " has been deleted.");
+		System.out.println();
 	}
 	
 	public void closeApplication() {
 		System.out.println();
 		System.out.println("Saving and closing...");
+	}
+	
+	public void taskDeleted() {
+		System.out.println("Task has been deleted.");
+		System.out.println();
+	}
+	
+	public void invalidInput() {
+		System.out.println("Invalid input. Please try again.");
+		System.out.println();
 	}
 
 }
