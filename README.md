@@ -1,7 +1,7 @@
 # Class: SE2300 - Software Construction
-# Project: Module 3 Assignment
-# Author: Chad Fletcher
-# Date: 2/17/26
+## Project: Module 3 Assignment
+### Author: Chad Fletcher
+### Date: 2/17/26
 
 ToDoLi - A simple ToDo List Application
 
